@@ -8,8 +8,10 @@
 #if defined(ARDUINO_ARCH_ESP8266)
 #include <c_types.h>
 #include <espnow.h>
+#include <ESP8266WiFi.h>
 #elif defined(ARDUINO_ARCH_ESP32)
 #include <esp_now.h>
+#include <WiFi.h>
 #else
 #error "This library supports ESP8266 and ESP32 only."
 #endif
