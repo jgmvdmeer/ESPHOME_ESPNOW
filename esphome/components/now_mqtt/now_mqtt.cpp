@@ -1,10 +1,18 @@
 #include "now_mqtt.h"
 #include "esphome/core/log.h"
 #include "esphome/core/application.h"
-#include <esp_now.h>
 #include <esp_wifi.h>
 #include <esphome/core/helpers.h>
 #include "esphome/core/version.h"
+
+#if defined(ARDUINO_ARCH_ESP8266)
+#include <c_types.h>
+#include <espnow.h>
+#elif defined(ARDUINO_ARCH_ESP32)
+#include <esp_now.h>
+#else
+#error "This library supports ESP8266 and ESP32 only."
+#endif
 
 namespace esphome
 {
