@@ -1,7 +1,6 @@
 #include "now_mqtt.h"
 #include "esphome/core/log.h"
 #include "esphome/core/application.h"
-#include <esp_wifi.h>
 #include <esphome/core/helpers.h>
 #include "esphome/core/version.h"
 
